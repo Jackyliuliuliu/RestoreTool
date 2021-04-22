@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Root>
+  <Packages>
+    <Package Optional="true">McsfDatabase</Package>
+    <Package Optional="true">XA_APR</Package>
+    <Package Optional="true">CTServiceDB</Package>
+  </Packages>
+  <Groups>
+    <Group Package="McsfDatabase" Module="MCSF_DB DICOM">
+      <Files> </Files>
+      <PreRestoreHandler>UIH.Mcsf.DBDICOM.DBDicomBR.dll</PreRestoreHandler>
+      <RestoreHandler>UIH.Mcsf.DBDICOM.DBDicomBR.dll</RestoreHandler>
+    </Group>
+    <Group Package="McsfDatabase" Module="MCSF_DB Protocol">
+      <Files> </Files>
+      <PreRestoreHandler>UIH.Mcsf.DBDICOM.DBProtocolBR.dll</PreRestoreHandler>
+      <RestoreHandler>UIH.Mcsf.DBDICOM.DBProtocolBR.dll</RestoreHandler>
+    </Group>
+    <Group Package="McsfDatabase" Module="MCSF_DB Message">
+      <Files>
+      </Files>
+      <PreRestoreHandler>Mcsf.Restore.DataBaseMessage.dll</PreRestoreHandler>
+      <RestoreHandler>Mcsf.Restore.DataBaseMessage.dll</RestoreHandler>
+    </Group>
+    <Group Package="McsfDatabase" Module="MCSF_Structure Report">
+      <Files>
+        <File>config/report</File>
+        <File>data/report</File>
+      </Files>
+      <PreRestoreHandler>UIH.Mcsf.Report.BackupRestore.dll</PreRestoreHandler>
+      <RestoreHandler>UIH.Mcsf.Restore.CommonMergeBasicConfig.dll</RestoreHandler>
+      <PostRestoreHandler>UIH.Mcsf.Report.BackupRestore.dll</PostRestoreHandler>
+    </Group>
+    <Group Package="XA_APR" Module="APR_File">
+      <Files>
+        <File>data/DB</File>
+      </Files>
+      <PreRestoreHandler>UIH.XA.XPostRestoreDB.dll</PreRestoreHandler>
+      <RestoreHandler>UIH.XA.XPostRestoreDB.dll</RestoreHandler>
+    </Group>
+    <Group Package="CTServiceDB" Module="CT_Service Database">
+      <PreRestoreHandler>UIH.Unity.Service.DBHandler.dll</PreRestoreHandler>
+      <RestoreHandler>UIH.Unity.Service.DBHandler.dll</RestoreHandler>
+    </Group>
+  </Groups>
+</Root>

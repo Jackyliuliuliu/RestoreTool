@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Root>
+  <Packages>
+    <Package Optional="true">McsfDatabase</Package>
+  </Packages>
+  <Groups>
+    <!-- <Group Package="McsfDatabase" Module="MCSF_DB DICOM"> -->
+      <!-- <Files> </Files> -->
+      <!-- <PreRestoreHandler>UIH.Mcsf.DBDICOM.DBDicomBR.dll</PreRestoreHandler> -->
+      <!-- <RestoreHandler>UIH.Mcsf.DBDICOM.DBDicomBR.dll</RestoreHandler>  -->
+      <!-- <RollBackHandler>UIH.Mcsf.DBDICOM.DBDicomBR.dll</RollBackHandler> -->
+    <!-- </Group>  -->
+    <Group Package="McsfDatabase" Module="MCSF_DB Protocol">
+      <Files> </Files> 
+      <PreRestoreHandler>UIH.Mcsf.DBDICOM.DBProtocolBR.dll</PreRestoreHandler>
+      <RestoreHandler>UIH.Mcsf.DBDICOM.DBProtocolBR.dll</RestoreHandler>
+      <RollBackHandler>UIH.Mcsf.DBDICOM.DBProtocolBR.dll</RollBackHandler>
+    </Group>  
+    <!-- <Group Package="McsfDatabase" Module="MCSF_DB Message"> -->
+      <!-- <Files> -->
+       <!-- </Files> -->
+       <!-- <PreRestoreHandler>Mcsf.Restore.DataBaseMessage.dll</PreRestoreHandler> -->
+       <!-- <RestoreHandler>Mcsf.Restore.DataBaseMessage.dll</RestoreHandler> -->
+     <!-- </Group> -->
+	<!-- <Group Package="McsfDatabase" Module="MCSF_Structure Report"> -->
+      <!-- <Files> -->
+        <!-- <File>config/report</File> -->
+        <!-- <File>data/report</File> -->
+      <!-- </Files> -->
+      <!-- <PreRestoreHandler>UIH.Mcsf.Report.BackupRestore.dll</PreRestoreHandler> -->
+      <!-- <RestoreHandler>UIH.Mcsf.Restore.CommonMergeBasicConfig.dll</RestoreHandler> -->
+      <!-- <PostRestoreHandler>UIH.Mcsf.Report.BackupRestore.dll</PostRestoreHandler> -->
+      <!-- <RollBackHandler>UIH.Mcsf.Report.BackupRestore.dll</RollBackHandler> -->
+    <!-- </Group> -->
+
+  </Groups>
+</Root>

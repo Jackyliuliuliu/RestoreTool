@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<Groups>
+		<Group Package="McsfDatabase" Module="MCSF_Mysql">
+			<Check>UIH.Mcsf.Restore.Check.dll</Check>
+			<Repair>UIH.Mcsf.Restore.Repair.dll</Repair>
+		</Group>
+		<!-- <Group Package="Test" Module="Test"> -->
+			<!-- <Check>UIH.Mcsf.Restore.Check.dll</Check> -->
+			<!-- <Repair IsWindow="True" ClassName="RepairWindow">RepairWindow.dll</Repair> -->
+		<!-- </Group> -->
+	</Groups>
+</Root>
